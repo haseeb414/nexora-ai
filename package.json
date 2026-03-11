@@ -1,0 +1,17 @@
+{
+  "name": "core-radiation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@vapi-ai/web": "^2.5.2",
+    "esbuild": "^0.27.3"
+  }
+}

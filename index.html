@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora | Premium AI Automation Agency</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- GLOBAL LOADER -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader-content">
+            <h1 class="loader-logo">NEXORA<span>.</span></h1>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p class="status-msg" id="status-msg">Initializing AI Engines...</p>
+        </div>
+        <div class="loader-bg"></div>
+    </div>
+
+    <!-- Particle Canvas Background (Global) -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- MAIN WRAPPER -->
+    <div class="smooth-wrapper" id="smooth-wrapper">
+        <div class="smooth-content" id="smooth-content">
+            
+            <!-- HEADER -->
+            <header class="header">
+                <div class="logo">NEXORA<span>.</span></div>
+                <nav class="nav">
+                    <a href="pages/about.html" class="nav-link">Vision</a>
+                    <a href="pages/services.html" class="nav-link">AI Agents</a>
+                    <a href="index.html#demo" class="nav-link">Demo</a>
+                    <a href="index.html#work" class="nav-link">Work</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="pages/contact.html" class="btn btn-nav">Get Started</a>
+                    <div class="menu-btn"><i class="fas fa-bars"></i></div>
+                </div>
+            </header>
+
+            <!-- INTRO SCROLL SEQUENCE -->
+            <section class="intro-sequence" id="intro-sequence">
+                <div class="intro-content" id="intro-content">
+                    <div class="intro-text-step step-1">System Initiated<span>.</span></div>
+                    <div class="intro-text-step step-2">Calibrating Neural Pathways<span>.</span></div>
+                    <div class="intro-text-step step-3">Welcome to the AI Realm<span>.</span></div>
+                </div>
+            </section>
+
+            <!-- HERO SECTION -->
+            <section class="hero" id="hero">
+                <div class="hero-glow"></div>
+                
+                <div class="container hero-container">
+                    <div class="hero-tagline gs-reveal">Intelligence Engineered</div>
+                    <h1 class="hero-title gs-reveal">
+                        <span class="static-text">We build</span><br>
+                        <span class="dynamic-text" id="dynamic-text">Premium AI Calling Agents</span>
+                    </h1>
+                    <p class="hero-subtitle gs-reveal">We build websites that don’t just look premium — they think premium.</p>
+                    <div class="hero-actions gs-reveal">
+                        <a href="tel:+1234567890" class="btn btn-primary btn-icon">
+                            <i class="fas fa-phone-alt"></i> Talk to an Expert
+                        </a>
+                        <a href="#demo" class="btn btn-secondary btn-icon">
+                            <i class="fas fa-play"></i> See AI in Action
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <span>Deploy</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </section>
+
+            <!-- VISION SECTION -->
+            <section class="vision" id="vision">
+                <div class="container">
+                    <div class="section-heading text-center gs-fade-up">
+                        <h2>The Nexora Vision</h2>
+                        <p>Bridging the gap between high-end aesthetics and autonomous workflows.</p>
+                    </div>
+
+                    <div class="vision-cards">
+                        <!-- Card 1 -->
+                        <div class="vision-card gs-fade-up">
+                            <div class="vision-img">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Aesthetic Design">
+                            </div>
+                            <div class="vision-content">
+                                <h3>Custom Aesthetic Design</h3>
+                                <p>We craft digital experiences that command attention. Every pixel is purposely placed to reflect premium branding and build immediate trust.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="vision-card reverse gs-fade-up">
+                            <div class="vision-img">
+                                <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop" alt="AI Agents">
+                            </div>
+                            <div class="vision-content">
+                                <h3>AI Agents Integrated</h3>
+                                <p>Your website becomes your best employee. 24/7 autonomous agents handling calls, qualifying leads, and closing deals while you sleep.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="vision-card gs-fade-up">
+                            <div class="vision-img">
+                                <div class="workflow-anim-placeholder">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                            </div>
+                            <div class="vision-content">
+                                <h3>Workflow Automation</h3>
+                                <p>Seamlessly connect your digital touchpoints. Lead capture flows directly into your CRM, triggering instant multi-channel responses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES SECTION -->
+            <section class="services" id="services">
+                <div class="container">
+                    <div class="section-heading gs-fade-up">
+                        <h2>Autonomous Architecture</h2>
+                        <p>Deploy intelligent systems that scale your operations infinitely.</p>
+                    </div>
+
+                    <div class="service-grid">
+                        <div class="service-card gs-fade-up">
+                            <div class="service-icon"><i class="fas fa-headset"></i></div>
+                            <h3>AI Calling Agents</h3>
+                            <p class="service-desc">Human-like conversational AI that can make outbound sales calls or handle inbound customer service inquiries flawlessly.</p>
+                            <div class="service-hover-content">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 24/7 Availability</li>
+                                    <li><i class="fas fa-check"></i> Multi-language Support</li>
+                                    <li><i class="fas fa-check"></i> CRM Integration</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-card gs-fade-up" style="transition-delay: 0.1s;">
+                            <div class="service-icon"><i class="fas fa-robot"></i></div>
+                            <h3>AI Chatbot Agents</h3>
+                            <p class="service-desc">Intelligent chat interfaces that go beyond FAQs, guiding users through complex funnels and booking appointments.</p>
+                            <div class="service-hover-content">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Lead Qualification</li>
+                                    <li><i class="fas fa-check"></i> Dynamic Responses</li>
+                                    <li><i class="fas fa-check"></i> Context Memory</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-card gs-fade-up" style="transition-delay: 0.2s;">
+                            <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                            <h3>AI Workflows</h3>
+                            <p class="service-desc">End-to-end automation connecting your website forms, AI agents, and internal tools to eliminate manual data entry.</p>
+                            <div class="service-hover-content">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Zapier/Make Integrations</li>
+                                    <li><i class="fas fa-check"></i> Instant Notifications</li>
+                                    <li><i class="fas fa-check"></i> Automated Follow-ups</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEMO / INTERACTIVE SECTION -->
+            <section class="demo-section" id="demo">
+                <div class="container">
+                    <div class="demo-wrapper gs-fade-up">
+                        <div class="demo-content">
+                            <h2>Experience the Future</h2>
+                            <p>Interact with our custom AI systems simulating real-world conversion environments.</p>
+                            <div class="demo-actions">
+                                <button class="btn btn-primary" id="demo-call-btn">
+                                    <i class="fas fa-phone-volume"></i> Simulate AI Call
+                                </button>
+                                <button class="btn btn-secondary" id="demo-chat-btn">
+                                    <i class="fas fa-comment-dots"></i> Open AI Chat
+                                </button>
+                            </div>
+                        </div>
+                        <div class="demo-visual">
+                            <!-- Visual representation of workflow -->
+                            <div class="workflow-node node-user">User</div>
+                            <div class="workflow-line line-1"></div>
+                            <div class="workflow-node node-ai">Nexora AI</div>
+                            <div class="workflow-line line-2"></div>
+                            <div class="workflow-node node-crm">CRM / Alert</div>
+                            
+                            <!-- Status pulses -->
+                            <div class="pulse-ring pr-1"></div>
+                            <div class="pulse-ring pr-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PORTFOLIO SECTION -->
+            <section class="portfolio" id="work">
+                <div class="container">
+                    <div class="section-heading text-center gs-fade-up">
+                        <h2>Select Implementations</h2>
+                        <p>High-converting aesthetic platforms powered by AI.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-slider gs-fade-up">
+                    <div class="portfolio-track" id="portfolio-track">
+                        <!-- Project 1 -->
+                        <div class="portfolio-item">
+                            <div class="portfolio-img">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" alt="TrendHive AI">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>TrendHive AI</h4>
+                                <span>E-Commerce Automated Analytics</span>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="portfolio-item">
+                            <div class="portfolio-img">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="Nexora Finance">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>FinAI Dashboard</h4>
+                                <span>Real-time Financial Predictor</span>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="portfolio-item">
+                            <div class="portfolio-img">
+                                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000&auto=format&fit=crop" alt="LegalTech AI">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>LegalMind</h4>
+                                <span>Automated Document Review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS SECTION -->
+            <section class="testimonials">
+                <div class="container">
+                    <div class="testimonial-carousel gs-fade-up">
+                        <div class="testimonial-slide active">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="testimonial-text">"Nexora completely transformed our lead generation. Their AI caller books 15 appointments a week completely autonomously. It's almost unfair to our competition."</p>
+                            <div class="testimonial-author">
+                                <strong>James Reed</strong>
+                                <span>CEO, Altitude Real Estate</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid gs-fade-up">
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="200">0</h3>
+                            <span>+ Automated Calls/Mo</span>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="85">0</h3>
+                            <span>% Lead Conversion Increase</span>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="24">0</h3>
+                            <span>/7 Autonomous Uptime</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section class="contact" id="contact">
+                <div class="contact-bg-glow"></div>
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-info gs-fade-up">
+                            <h2>Let’s Build Your AI Website</h2>
+                            <p>Ready to deploy premium aesthetics and autonomous intelligence within your business? Reach out today.</p>
+                            
+                            <div class="contact-methods">
+                                <div class="method">
+                                    <div class="method-icon-wrap"><i class="fas fa-envelope"></i></div>
+                                    <span>nexoraautomation1@gmail.com</span>
+                                </div>
+                                <div class="method">
+                                    <div class="method-icon-wrap"><i class="fab fa-whatsapp"></i></div>
+                                    <span>+92 326 020 3301</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-wrapper gs-fade-up">
+                            <form id="nexora-form" class="contact-form">
+                                <div class="form-group slide-up-anim">
+                                    <input type="text" id="name" required placeholder="Your Name">
+                                    <div class="input-highlight"></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group slide-up-anim" style="animation-delay: 0.1s;">
+                                        <input type="email" id="email" required placeholder="Email Address">
+                                        <div class="input-highlight"></div>
+                                    </div>
+                                    <div class="form-group slide-up-anim" style="animation-delay: 0.2s;">
+                                        <input type="tel" id="phone" required placeholder="Phone Number">
+                                        <div class="input-highlight"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group slide-up-anim" style="animation-delay: 0.3s;">
+                                    <select id="service" required>
+                                        <option value="" disabled selected>Service Interested In</option>
+                                        <option value="AI Calling">AI Calling Agents</option>
+                                        <option value="AI Chatbot">AI Chatbot Integration</option>
+                                        <option value="Full Website">Full Premium AI Website</option>
+                                    </select>
+                                    <div class="input-highlight"></div>
+                                </div>
+                                <div class="form-group slide-up-anim" style="animation-delay: 0.4s;">
+                                    <textarea id="message" rows="4" required placeholder="Tell us about your project..."></textarea>
+                                    <div class="input-highlight"></div>
+                                </div>
+                                <button type="submit" class="btn btn-primary submit-btn bump-hover">
+                                    Deploy Request <i class="fas fa-paper-plane"></i>
+                                </button>
+                                <p class="form-status" id="form-status"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-top">
+                        <div class="footer-brand">
+                            <div class="logo">NEXORA<span>.</span></div>
+                            <p>Premium aesthetics. Autonomous logic.</p>
+                        </div>
+                        <div class="footer-links">
+                            <div class="link-col">
+                                <h4>Navigation</h4>
+                                <a href="index.html">Home</a>
+                                <a href="pages/services.html">Services</a>
+                                <a href="pages/about.html">About</a>
+                                <a href="pages/contact.html">Contact</a>
+                            </div>
+                            <div class="link-col">
+                                <h4>Connect</h4>
+                                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 Nexora. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="#">Privacy</a>
+                            <a href="#">Terms</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            
+        </div>
+    </div>
+
+    <!-- Interactive AI Chat Widget (Mockup) -->
+    <div class="ai-chat-widget hidden" id="ai-chat-widget">
+        <div class="chat-header">
+            <span>Nexora AI Agent</span>
+            <button class="close-chat" id="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="msg ai">Hello! I'm Nexora's AI assistant. Are you looking to upgrade your website or integrate AI automation?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message..." id="chat-input-field">
+            <button id="send-btn"><i class="fas fa-arrow-up"></i></button>
+        </div>
+    </div>
+
+    <!-- Thank You Modal Popup -->
+    <div class="modal-overlay hidden" id="thank-you-modal">
+        <div class="modal-content text-center">
+            <div class="modal-icon"><i class="fas fa-check-circle"></i></div>
+            <h2 class="modal-title">Request Received</h2>
+            <p class="modal-text">Thank you for connecting with Nexora. Your data has been securely transmitted.</p>
+            <p class="modal-subtext">Our AI agents will analyze your request and an expert will reach out to you shortly via WhatsApp and Email.</p>
+            <button class="btn btn-primary mt-4 bump-hover" id="close-modal-btn">Acknowledge</button>
+        </div>
+    </div>
+
+    <!-- AI Voice Call Modal -->
+    <div class="modal-overlay hidden" id="voice-call-modal">
+        <div class="call-modal-content">
+            <button class="close-call-btn" id="close-call-btn"><i class="fas fa-times"></i></button>
+            
+            <div class="call-header">
+                <div class="ai-avatar">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=200&auto=format&fit=crop" alt="AI Agent">
+                    <div class="pulse-ring-avatar pr-a1"></div>
+                    <div class="pulse-ring-avatar pr-a2"></div>
+                </div>
+                <h3>Nexora Voice AI</h3>
+                <p id="call-status-text">Connecting to intelligence...</p>
+            </div>
+            
+            <!-- Audio Visualizer (CSS driven) -->
+            <div class="audio-visualizer inactive" id="audio-visualizer">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+            <div class="call-controls">
+                <button class="call-action-btn mute-btn" id="call-mute-btn" title="Mute/Unmute"><i class="fas fa-microphone"></i></button>
+                <button class="call-action-btn end-btn" id="call-end-btn" title="End Call"><i class="fas fa-phone-slash"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vapi Web SDK (bundled locally) -->
+    <script src="vapi-bundle.js"></script>
+    <!-- Script that handles Logic, Particles, APIs -->
+    <script src="script.js"></script>
+</body>
+</html>
